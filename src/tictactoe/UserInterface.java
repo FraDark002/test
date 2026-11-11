@@ -21,12 +21,15 @@ public class UserInterface {
         System.out.println("Scegli il simbolo con cui giocherai:");
         while (true) {
             System.out.print("Inserisci 1 per 'X' o 2 per 'O' : ");
-            int scelta=scanner.nextInt();
-            if (scelta==1)
+            String scelta=scanner.next();
+            if (scelta.equalsIgnoreCase("X")){
                 return Board.CELL_X;
-            else if (scelta==2)
+	    } else if (scelta.equalsIgnoreCase("Y")){
                 return Board.CELL_O;
+	    }
+	    System.out.println("Lettera non valida: scegli X oppure O.");
         }
+	
     }
     
     /**
